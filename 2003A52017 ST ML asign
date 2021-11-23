@@ -1,0 +1,89 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "name": "J-component Assignment",
+      "provenance": [],
+      "collapsed_sections": []
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "si6xSG_rKqjv"
+      },
+      "source": [
+        "import numpy as np\n",
+        "  \n",
+        "x1=[3.2,3.2,3.7,3.9,4,4,4.1,4.5,4.9,5.1,5.3,5.9,6]\n",
+        "y=[54445,64445,57189,63218,55794,56957,57081,61111,67938,66029,83088,81363,93940]\n",
+        "yp=[]\n",
+        "e=[]\n",
+        "\n",
+        "m=[1235,1500,1850,2000]\n",
+        "c=[1900,1950,2000,2100]\n",
+        "def linear(m,c):\n",
+        "  sum=0\n",
+        "  yp=[]\n",
+        "  g=0\n",
+        "  for i in range(0,len(x1)):\n",
+        "    yp.append(m*x1[i]+c)\n",
+        "    g=(y[i]-yp[i])**2\n",
+        "    sum=sum+g\n",
+        "  print('meam square error is :',np.mod(sum,len(x1)))\n",
+        "  sum=0\n",
+        "\n",
+        "\n"
+      ],
+      "execution_count": 14,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "XyqQhDfYSml8",
+        "outputId": "4b7fbdc0-a9eb-433a-e085-5c686c0f9b81"
+      },
+      "source": [
+        "for i in range(0,4):\n",
+        "   linear(m[i],c[i])"
+      ],
+      "execution_count": 15,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "meam square error is : 11.0\n",
+            "meam square error is : 7.0\n",
+            "meam square error is : 0.0\n",
+            "meam square error is : 4.0\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "SWVia9VYSg01"
+      },
+      "source": [
+        ""
+      ],
+      "execution_count": null,
+      "outputs": []
+    }
+  ]
+}
